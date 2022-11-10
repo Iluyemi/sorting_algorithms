@@ -9,10 +9,10 @@
  */
 void print_array(const int *array, size_t size)
 {
-    size_t i;
+    int i;
 
     i = 0;
-    while (array && i < size)
+    while (array && i < (int)size)
     {
         if (i > 0)
             printf(", ");
