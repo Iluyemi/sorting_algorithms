@@ -3,28 +3,28 @@
 #include "sort.h"
 
 /**
- * main - Entry point
- *
+ * bubble_sort - sorting algorithm
+ * @array: input array
+ * @size: size of array
  * Return: Always 0
  */
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t h;
-	int i;
+	int hold, h, k, j;
 
-	for(h = 0; h < size; h++)
+	j = (int)size;
+	for (h = 0; h < j; h++)
 	{
-		if (array[h] > array[h + 1])
+		for (k = 0; k < j; k++)
 		{
-			i = array[h];
-			array[h] = array[h +1];
-			array[h + 1] = i;
-			print_array(array, size);
-		}
-		else
-		{
-			continue;
+			if (array[k] > array[k + 1])
+			{
+				hold = array[k];
+				array[k] = array[k + 1];
+				array[k + 1] = hold;
+				print_array(array, size);
+			}
 		}
 	}
 }
